@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+    }
+
+    #wrapper {
+      margin: auto;
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+    #instructions {
+      grid-row: 1;
+      height: 10em;
+    }
+
+    #canvas {
+      grid-row: 2;
+    }
+
+    #feedback {
+      grid-row: 3;
+    }
+
+    button {
+      border: 2px solid black;
+      background-color: white;
+      font-family: inherit;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+
+    button:active {
+      background-color: #bbb;
+    }
+  </style>
+  <title>reflection</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="instructions"></div>
+    <div id="canvas">
+      <canvas id="interactive"></canvas>
+    </div>
+    <div id="feedback"></div>
+  </div>
+</body>
+
+</html>
