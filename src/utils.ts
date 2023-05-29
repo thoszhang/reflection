@@ -6,10 +6,6 @@ export function clamp(x: number, min: number, max: number): number {
   return Math.min(Math.max(min, x), max);
 }
 
-function sum({ di: vi, dj: vj }: Vector, { di: ui, dj: uj }: Vector): Vector {
-  return { di: vi + ui, dj: vj + uj };
-}
-
 function diff({ di: vi, dj: vj }: Vector, { di: ui, dj: uj }: Vector): Vector {
   return { di: vi - ui, dj: vj - uj };
 }
