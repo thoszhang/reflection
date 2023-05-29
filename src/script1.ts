@@ -138,17 +138,7 @@ function setUpPart1(
       canvas.removeEventListener("mousedown", handleMouseDown1);
       document.removeEventListener("mousemove", handleMouseMove1);
 
-      const correctP = document.createElement("p");
-      correctP.innerHTML = "Correct!";
-
-      const continueButton = document.createElement("button");
-      continueButton.innerHTML = "Continue";
-      continueButton.type = "button";
-      feedback.replaceChildren(correctP, continueButton);
-
-      continueButton.addEventListener("click", () => {
-        setUpPart2(instructions, feedback, canvas, ctx);
-      });
+      setUpPart2(instructions, feedback, canvas, ctx);
     } else {
       const incorrectP = document.createElement("p");
       incorrectP.innerHTML = "Incorrect.";
@@ -167,7 +157,7 @@ function setUpPart2(
 ) {
   const p = document.createElement("p");
   p.innerHTML =
-    "Drag the virtual image formed by reflection to the correct position by extending the reflected ray backwards.";
+    "Correct! Now, drag the virtual image formed by reflection to the correct position by extending the reflected ray backwards.";
   const checkButton = document.createElement("button");
   checkButton.innerHTML = "Check";
   checkButton.type = "button";
@@ -211,17 +201,7 @@ function setUpPart2(
       canvas.removeEventListener("mousedown", handleMouseDown2);
       document.removeEventListener("mousemove", handleMouseMove2);
 
-      const correctP = document.createElement("p");
-      correctP.innerHTML = "Correct!";
-
-      const continueButton = document.createElement("button");
-      continueButton.innerHTML = "Continue";
-      continueButton.type = "button";
-      feedback.replaceChildren(correctP, continueButton);
-
-      continueButton.addEventListener("click", () => {
-        setUpPart3(instructions, feedback, canvas, ctx);
-      });
+      setUpPart3(instructions, feedback, canvas, ctx);
     } else {
       const incorrectP = document.createElement("p");
       incorrectP.innerHTML = "Incorrect.";
@@ -240,7 +220,7 @@ function setUpPart3(
 ) {
   const p = document.createElement("p");
   p.innerHTML =
-    "Experiment with dragging the eye and the object to see how the light ray and virtual image are affected.";
+    "Correct! Experiment with dragging the eye and the object to see how the light ray and virtual image are affected.";
   instructions.replaceChildren(p);
 
   feedback.replaceChildren();
